@@ -1,4 +1,4 @@
-package Poon;
+package Poon.Models;
 
 public class Playlist {
 
