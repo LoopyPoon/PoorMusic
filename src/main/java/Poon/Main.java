@@ -1,5 +1,8 @@
 package Poon;
 
+import Poon.FileCreators.ExcelCreator.EXCEL;
+import Poon.FileCreators.JsonCreator.JSON;
+import Poon.FileCreators.XmlCreator.XML;
 import Poon.Models.Playlist;
 import Poon.Models.Track;
 
@@ -22,11 +25,30 @@ public class Main {
             System.out.println(track);
         }
 
-        XML xml = new XML();
-        xml.createXml(playlist);
-        xml.findTrack("Kordhell");
-        xml.findTrack("Hensonn");
-        xml.addXmlNote("Culture Shock", "Discotheque", "123");
-        xml.addXmlNote("Feint", "Homebound", "321");
+        // XML Block
+//        {
+//            XML xml = new XML();
+//            xml.createXml(playlist);
+//            xml.findTrack("Kordhell");
+//            xml.findTrack("Hensonn");
+//            xml.addXmlNote("Culture Shock", "Discotheque", "123");
+//            xml.addXmlNote("Feint", "Homebound", "321");
+//            xml.deleteTrack("RITUAL");
+//        }
+
+        // Json Block
+//        {
+//            JSON json = new JSON();
+//            json.createJson(playlist);
+//            json.findTrack("Zivert");
+//            json.addTrack("МакSим", "Не отдам", "111");
+//            json.deleteTrack("The Mother We Share");
+//        }
+
+        // Excel Block
+        {
+            EXCEL excel = new EXCEL();
+            excel.creatExcel(playlist);
+        }
     }
 }
